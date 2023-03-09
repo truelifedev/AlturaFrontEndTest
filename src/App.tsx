@@ -63,7 +63,6 @@ export default function App() {
                         <NFTItemCard
                             gap={1}
                             onClick={() => {
-                                console.log('selectedItem', item);
                                 setSelectedItem(item);
                                 setDlgOpen(true);
                             }}
@@ -71,9 +70,9 @@ export default function App() {
                             <img
                                 width="100%"
                                 height="320px"
-                                src={getImgUrl(JSON.parse(item.metadata).image)}
+                                src={item.metadata ? getImgUrl(JSON.parse(item.metadata).image) : ''}
                                 style={{ borderRadius: '12px', objectFit: 'contain' }}
-                                alt=""
+                                alt="No Image Found."
                             />
                             <Typography fontWeight={600} marginX="auto">
                                 {item.name}

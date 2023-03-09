@@ -11,3 +11,11 @@ export const PurchaseBtn = styled(Button)`
         background: #2c85d3;
     }
 `;
+
+export const InfoBox = styled('fieldset')`
+    margin-top: 12px;
+    text-align: left;
+    border: 2px solid #9ec7ea;
+    border-radius: 16px;
+    padding: 12px 24px;
+`;
